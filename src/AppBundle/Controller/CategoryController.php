@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function createAction(Request $request)
     {
-        // Render index.html.twig from category directory - app/Resources/views/category
+        // Render create.html.twig from category directory - app/Resources/views/category
         return $this->render('category/create.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
@@ -38,7 +38,7 @@ class CategoryController extends Controller
      */
     public function editAction(Request $request)
     {
-        // Render index.html.twig from category directory - app/Resources/views/category
+        // Render edit.html.twig from category directory - app/Resources/views/category
         return $this->render('category/edit.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
@@ -49,6 +49,6 @@ class CategoryController extends Controller
      */
     public function deleteAction(Request $request)
     {
-        
+         // No view to render
     }
 }
