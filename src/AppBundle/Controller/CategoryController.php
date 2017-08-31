@@ -16,9 +16,39 @@ class CategoryController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
+        // Render index.html.twig from category directory - app/Resources/views/category
+        return $this->render('category/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
+    }
+
+    /**
+     * @Route("/category/create", name="category_create")
+     */
+    public function createAction(Request $request)
+    {
+        // Render index.html.twig from category directory - app/Resources/views/category
+        return $this->render('category/create.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+     /**
+     * @Route("/category/edit/{id}", name="category_edit")
+     */
+    public function editAction(Request $request)
+    {
+        // Render index.html.twig from category directory - app/Resources/views/category
+        return $this->render('category/edit.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    /**
+     * @Route("/category/delete/{id}", name="category_delete")
+     */
+    public function deleteAction(Request $request)
+    {
+        
     }
 }
