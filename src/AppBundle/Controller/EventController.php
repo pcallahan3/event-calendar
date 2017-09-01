@@ -6,7 +6,7 @@
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;             //Do you comments foR THIS FILE
 use Symfony\Component\HttpFoundation\Request;
 
 class EventController extends Controller
@@ -16,7 +16,7 @@ class EventController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // Render index.html.twig from category directory - app/Resources/views/category
+        // Render index.html.twig from category directory in app/Resources/views/events
         return $this->render('events/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
@@ -27,7 +27,7 @@ class EventController extends Controller
      */
     public function createAction(Request $request)
     {
-        // Render create.html.twig from category directory - app/Resources/views/category
+        // Render create.html.twig from category directory in app/Resources/views/events
         return $this->render('events/create.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
@@ -38,7 +38,7 @@ class EventController extends Controller
      */
     public function editAction(Request $request)
     {
-        // Render edit.html.twig from category directory - app/Resources/views/category
+        // Render edit.html.twig from category directory - app/Resources/views/events
         return $this->render('events/edit.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
