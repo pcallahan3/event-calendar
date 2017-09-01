@@ -1,5 +1,30 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-   EVENTS/INDEX
+ <div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Events</h3>
+	  </div>
+	  <div class="panel-body">
+	    <table class="table table-striped">
+	    	<thead>
+	    		<tr>
+	    			<th>Event Name</th>
+	    			<th>Category</th>
+	    			<th>Day</th>
+	    		</tr>
+	    	</thead>
+	    	<tbody>
+	    		<tr>
+	    			<td>Event</td>
+	    			<td>Category</td>
+	    			<td>Day</td>
+	    			<td><a class="btn btn-primary" href="/event/edit/1">Edit</a><a class="btn btn-danger" href="/event/delete/1">Delete</a></td>
+	    		</tr>
+	    	</tbody>
+	    </table>
+
+	  </div>
+	</div>
+
 {% endblock %}
