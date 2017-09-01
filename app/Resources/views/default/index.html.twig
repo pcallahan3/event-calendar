@@ -1,6 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-   DEFAULT/INDEX
+   <div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Welcome</h3>
+	  </div>
+	  <div class="panel-body">
+	    <p>Welcome to event calendar</p>
+	    <a class="btn btn-success" href="/event/create">Create new event</a>
+	    <a class="btn btn-primary" href="/category/create">Create new category</a>
+	  </div>
+	</div>
+
 {% endblock %}
 

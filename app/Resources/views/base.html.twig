@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        {% block stylesheets %}{% endblock %}
+      
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
      
           <li class="nav-item dropdown">
@@ -47,12 +47,9 @@
 
         <div class="row">
             <div class="col-md-12">
-            {% block body %}
-            {% endblock %}
+            {% block body %}{% endblock %}
             </div>
         </div>
-
-
     </div><!-- /.container -->
         {% block javascripts %}{% endblock %}
          <!-- Optional JavaScript -->
