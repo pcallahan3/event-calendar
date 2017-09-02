@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 class CategoryController extends Controller
 {
     /**
-     * @Route("/categories", name="category_list")
+     * @Route("/category", name="category_list")
      */
     public function indexAction(Request $request)
     {
