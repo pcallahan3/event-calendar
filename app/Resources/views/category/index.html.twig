@@ -14,11 +14,16 @@
 	    		</tr>
 	    	</thead>
 	    	<tbody>
+
+	    	<!--Loop through the db category fields-->
+	    	{% for category in categories %}
 	    		<tr>
-	    			<td>Category 1</td>
-	    			<td><a class="btn btn-primary" href="/category/edit/1">Edit</a><a class="btn btn-danger" href="/category/delete/1">Delete</a></td>
+	    		<!--Table name and field name-->
+	    			<td>{{category.name}}</td>
+	    			<td><a class="btn btn-primary" href="/category/edit/{{category.id}}">Edit</a><a class="btn btn-danger" href="/category/delete/{{category.id}}">Delete</a></td>
 	    			
 	    		</tr>
+	    	{% endfor %}
 	    	</tbody>
 	    </table>
 
