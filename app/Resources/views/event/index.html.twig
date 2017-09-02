@@ -15,13 +15,16 @@
 	    		</tr>
 	    	</thead>
 	    	<tbody>
+	    	{% for event in events %}
 	    		<tr>
-	    			<td>Event</td>
-	    			<td>Category</td>
-	    			<td>Day</td>
-	    			<td><a class="btn btn-primary" href="/event/edit/1">Edit</a><a class="btn btn-danger" href="/event/delete/1">Delete</a></td>
+	    			<td>{{event.name}}</td>
+	    			<td>{{event.category.name}}</td>
+	    			<td>{{event.day|date('F j, Y, g:i a')}}</td>
+	    			<td><a class="btn btn-primary" href="/event/edit/{{event.id}}">Edit</a><a class="btn btn-danger" href="/event/delete/{{event.id}}">Delete</a></td>
 	    		</tr>
+	    		{% endfor %}
 	    	</tbody>
+	    	
 	    </table>
 
 	  </div>
