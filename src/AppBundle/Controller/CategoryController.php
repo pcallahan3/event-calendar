@@ -49,7 +49,28 @@ class CategoryController extends Controller
         //Check to see if data is submitted
         if($form->isSubmitted() && $form->isValid()){
             $name = $form['name']->getData();
-            die($name);
+            
+            //Get current date and time
+            $now = new \DateTime("now");
+
+            //Set name and date
+            $category->setName($name);
+            $category->setCreateDate($now);
+
+            $em = $this->getDoctrine()->getManager();
+
+            //Sve data to DB
+            $em->persist($category);
+            $em->flush();
+
+            //Flash message 
+            $this->addFlash(
+                   'notice',
+                   'Category Saved'
+            );
+
+            //Redirect to category_list which is index.html.twig
+            return $this->redirectToRoute('category_list');
         }
 
         // Render create.html.twig template from category directory - app/Resources/views/category
